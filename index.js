@@ -10,5 +10,8 @@ client.once('ready', () => {
 client.login(DISCORD_TOKEN)
 
 client.on('message', message => {
-    console.log(message.content)
+    if(message.content === '!ping') {
+        const user = message.author;
+        message.channel.send(`Hey, ${user}! How can I help you?`)
+    }
 })
