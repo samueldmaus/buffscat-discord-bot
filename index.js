@@ -16,7 +16,7 @@ client.once('ready', () => {
 client.on('message', message => {
     if(message.content === '!ping') {
         const user = message.author;
-        message.channel.send(`Hey, ${user}! How can I help you?`)
+        message.channel.send(`Hey, ${user}! I am in the ${client.guilds}`)
     }
 });
 
